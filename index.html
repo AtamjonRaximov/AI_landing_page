@@ -1,0 +1,2780 @@
+<!DOCTYPE html>
+<html lang="uz" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sun'iy Intellekt - Atamjon Raximov</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1e40af",
+              secondary: "#3b82f6",
+              accent: "#60a5fa",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-gray-50 font-sans">
+    <!-- Sidebar Navigation -->
+    <div
+      id="sidebar"
+      class="fixed left-0 top-0 h-full w-80 bg-white shadow-lg border-r border-gray-200 z-50 transform -translate-x-full transition-transform duration-300 ease-in-out"
+    >
+      <div class="p-6 border-b border-gray-200">
+        <h2 class="text-xl font-bold text-gray-800">Navigatsiya</h2>
+        <button
+          id="closeSidebar"
+          class="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <nav class="p-4 overflow-y-auto h-full">
+        <ul class="space-y-2">
+          <li>
+            <a
+              href="#title"
+              class="nav-link block p-3 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors"
+              >Sarlavha</a
+            >
+          </li>
+          <li>
+            <a
+              href="#declaration"
+              class="nav-link block p-3 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors"
+              >Deklaratsiya</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contents"
+              class="nav-link block p-3 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors"
+              >Mundarija</a
+            >
+          </li>
+          <li>
+            <a
+              href="#introduction"
+              class="nav-link block p-3 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors"
+              >Kirish</a
+            >
+          </li>
+          <li>
+            <div class="font-semibold text-gray-800 p-2">Topshiriq A</div>
+            <ul class="ml-4 space-y-1">
+              <li>
+                <a
+                  href="#p1"
+                  class="nav-link block p-2 rounded hover:bg-blue-50 text-gray-600 hover:text-blue-600 transition-colors"
+                  >P1 - AI Tushunchalari</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#p2"
+                  class="nav-link block p-2 rounded hover:bg-blue-50 text-gray-600 hover:text-blue-600 transition-colors"
+                  >P2 - Afzallik va Xavflar</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#m1"
+                  class="nav-link block p-2 rounded hover:bg-blue-50 text-gray-600 hover:text-blue-600 transition-colors"
+                  >M1 - Tahlil</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#d1"
+                  class="nav-link block p-2 rounded hover:bg-blue-50 text-gray-600 hover:text-blue-600 transition-colors"
+                  >D1 - Baholash</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div class="font-semibold text-gray-800 p-2">Topshiriq B</div>
+            <ul class="ml-4 space-y-1">
+              <li>
+                <a
+                  href="#p3"
+                  class="nav-link block p-2 rounded hover:bg-blue-50 text-gray-600 hover:text-blue-600 transition-colors"
+                  >P3 - Loyiha Maqsadlari</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#p4"
+                  class="nav-link block p-2 rounded hover:bg-blue-50 text-gray-600 hover:text-blue-600 transition-colors"
+                  >P4 - Ma'lumotlar To'plami</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#m2"
+                  class="nav-link block p-2 rounded hover:bg-blue-50 text-gray-600 hover:text-blue-600 transition-colors"
+                  >M2 - EDA Tahlili</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#d2"
+                  class="nav-link block p-2 rounded hover:bg-blue-50 text-gray-600 hover:text-blue-600 transition-colors"
+                  >D2 - Samaradorlik Baholash</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div class="font-semibold text-gray-800 p-2">Topshiriq C</div>
+            <ul class="ml-4 space-y-1">
+              <li>
+                <a
+                  href="#p5"
+                  class="nav-link block p-2 rounded hover:bg-blue-50 text-gray-600 hover:text-blue-600 transition-colors"
+                  >P5 - Yechim Ishlab Chiqish</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#m3"
+                  class="nav-link block p-2 rounded hover:bg-blue-50 text-gray-600 hover:text-blue-600 transition-colors"
+                  >M3 - Sinov va Takomillashtirish</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#d3"
+                  class="nav-link block p-2 rounded hover:bg-blue-50 text-gray-600 hover:text-blue-600 transition-colors"
+                  >D3 - Yakuniy Baholash</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a
+              href="#conclusion"
+              class="nav-link block p-3 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors"
+              >Xulosa</a
+            >
+          </li>
+          <li>
+            <a
+              href="#references"
+              class="nav-link block p-3 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors"
+              >Manbalar</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Overlay -->
+    <div
+      id="overlay"
+      class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"
+    ></div>
+
+    <!-- Main Content -->
+    <div class="min-h-screen">
+      <!-- Header -->
+      <header
+        class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-30"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between items-center py-4">
+            <button
+              id="openSidebar"
+              class="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+            <h1 class="text-2xl font-bold text-gray-900">
+              Sun'iy Intellekt - Atamjon Raximov
+            </h1>
+            <div class="w-10"></div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Title Section -->
+        <section id="title" class="mb-16">
+          <div
+            class="text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white p-12 rounded-xl shadow-lg"
+          >
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+              Introduction to Artificial Intelligence
+            </h1>
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6">
+              Atamjon Raximov
+            </h2>
+            <div
+              class="bg-white bg-opacity-20 rounded-lg p-6 max-w-2xl mx-auto"
+            >
+              <p class="text-lg mb-2">
+                <strong>Unit 21:</strong> Introduction to Artificial
+                Intelligence
+              </p>
+              <p class="text-lg mb-2">
+                <strong>O'qituvchi:</strong> A'zamjon Boydedayev
+              </p>
+              <p class="text-lg mb-2"><strong>Guruh raqmi:</strong> 24-213</p>
+              <p class="text-lg mb-2"><strong>Talaba ID:</strong> 240394</p>
+              <p class="text-lg">
+                <strong>Taqdim etilgan sana:</strong> 31.05.2025
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Declaration Section -->
+        <section id="declaration" class="mb-16">
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <h2
+              class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2"
+            >
+              BTEC O'QUVCHILAR TOPSHIRIQLARINI BAHOLASH VA DEKLARATSIYASI
+            </h2>
+            <div class="prose max-w-none">
+              <p class="text-gray-700 mb-6">
+                Baholash uchun ishlarni taqdim etganda, har bir o'quvchi ish
+                o'ziniki ekanligini tasdiqlovchi deklaratsiyani imzolashi kerak.
+              </p>
+
+              <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                  <p>
+                    <strong>O'quvchi (talaba) identifikatori:</strong> 240394
+                  </p>
+                  <p><strong>Baholovchi nomi:</strong> A'zamjon Boydedayev</p>
+                  <p>
+                    <strong>BTEC dasturi nomi:</strong> Pearson BTEC Higher
+                    Nationals in Information Technologies
+                  </p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                  <p>
+                    <strong>Birlik raqami va nomi:</strong> Introduction to
+                    Artificial Intelligence
+                  </p>
+                  <p>
+                    <strong>Topshiriq nomi:</strong> Investigate, explore, and
+                    train your first model
+                  </p>
+                  <p>
+                    <strong>Topshiriq topshirilgan sana:</strong> 31.05.2025
+                  </p>
+                </div>
+              </div>
+
+              <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-6">
+                <h3 class="text-xl font-semibold mb-4">
+                  O'quvchi deklaratsiyasi
+                </h3>
+                <p class="text-gray-700 mb-4">
+                  Ushbu topshiriq uchun taqdim etilgan ish meniki ekanligini
+                  tasdiqlayman. Ishda foydalanilgan manbalarga aniq havola
+                  qildim. Men noto'g'ri deklaratsiya noto'g'ri ishlashning bir
+                  shakli ekanligini tushunaman.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contents Section -->
+        <section id="contents" class="mb-16">
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <h2
+              class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2"
+            >
+              Mundarija
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <ol class="space-y-2 text-gray-700">
+                  <li
+                    class="flex justify-between cursor-pointer hover:bg-blue-50 p-2 rounded"
+                    onclick="scrollToSection('introduction')"
+                  >
+                    <span>1. KIRISH</span><span>4</span>
+                  </li>
+                  <li
+                    class="flex justify-between cursor-pointer hover:bg-blue-50 p-2 rounded"
+                    onclick="scrollToSection('task-a')"
+                  >
+                    <span>2. TOPSHIRIQ A</span><span>5</span>
+                  </li>
+                  <li
+                    class="ml-4 flex justify-between cursor-pointer hover:bg-blue-50 p-2 rounded"
+                    onclick="scrollToSection('p1')"
+                  >
+                    <span>P1</span><span>5</span>
+                  </li>
+                  <li
+                    class="ml-4 flex justify-between cursor-pointer hover:bg-blue-50 p-2 rounded"
+                    onclick="scrollToSection('p2')"
+                  >
+                    <span>P2</span><span>7</span>
+                  </li>
+                  <li
+                    class="ml-4 flex justify-between cursor-pointer hover:bg-blue-50 p-2 rounded"
+                    onclick="scrollToSection('m1')"
+                  >
+                    <span>M1</span><span>12</span>
+                  </li>
+                  <li
+                    class="ml-4 flex justify-between cursor-pointer hover:bg-blue-50 p-2 rounded"
+                    onclick="scrollToSection('d1')"
+                  >
+                    <span>D1</span><span>15</span>
+                  </li>
+                  <li
+                    class="flex justify-between cursor-pointer hover:bg-blue-50 p-2 rounded"
+                    onclick="scrollToSection('task-b')"
+                  >
+                    <span>3. TOPSHIRIQ B</span><span>17</span>
+                  </li>
+                </ol>
+              </div>
+              <div>
+                <ol class="space-y-2 text-gray-700" start="8">
+                  <li
+                    class="ml-4 flex justify-between cursor-pointer hover:bg-blue-50 p-2 rounded"
+                    onclick="scrollToSection('p3')"
+                  >
+                    <span>P3</span><span>17</span>
+                  </li>
+                  <li
+                    class="ml-4 flex justify-between cursor-pointer hover:bg-blue-50 p-2 rounded"
+                    onclick="scrollToSection('p4')"
+                  >
+                    <span>P4</span><span>18</span>
+                  </li>
+                  <li
+                    class="ml-4 flex justify-between cursor-pointer hover:bg-blue-50 p-2 rounded"
+                    onclick="scrollToSection('m2')"
+                  >
+                    <span>M2</span><span>20</span>
+                  </li>
+                  <li
+                    class="ml-4 flex justify-between cursor-pointer hover:bg-blue-50 p-2 rounded"
+                    onclick="scrollToSection('d2')"
+                  >
+                    <span>D2</span><span>21</span>
+                  </li>
+                  <li
+                    class="flex justify-between cursor-pointer hover:bg-blue-50 p-2 rounded"
+                    onclick="scrollToSection('task-c')"
+                  >
+                    <span>4. TOPSHIRIQ C</span><span>23</span>
+                  </li>
+                  <li
+                    class="ml-4 flex justify-between cursor-pointer hover:bg-blue-50 p-2 rounded"
+                    onclick="scrollToSection('p5')"
+                  >
+                    <span>P5</span><span>23</span>
+                  </li>
+                  <li
+                    class="ml-4 flex justify-between cursor-pointer hover:bg-blue-50 p-2 rounded"
+                    onclick="scrollToSection('m3')"
+                  >
+                    <span>M3</span><span>27</span>
+                  </li>
+                  <li
+                    class="ml-4 flex justify-between cursor-pointer hover:bg-blue-50 p-2 rounded"
+                    onclick="scrollToSection('d3')"
+                  >
+                    <span>D3</span><span>29</span>
+                  </li>
+                  <li
+                    class="flex justify-between cursor-pointer hover:bg-blue-50 p-2 rounded"
+                    onclick="scrollToSection('conclusion')"
+                  >
+                    <span>5. XULOSA</span><span>30</span>
+                  </li>
+                  <li
+                    class="flex justify-between cursor-pointer hover:bg-blue-50 p-2 rounded"
+                    onclick="scrollToSection('references')"
+                  >
+                    <span>6. MANBALAR RO'YXATI</span><span>32</span>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section id="introduction" class="mb-16">
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <h2
+              class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2"
+            >
+              Kirish
+            </h2>
+            <div class="prose max-w-none text-gray-700 leading-relaxed">
+              <p class="text-lg mb-6">
+                Sun'iy intellekt (AI) zamonaviy biznes muhitida strategik
+                qarorlar qabul qilish, operatsion samaradorlikni oshirish va
+                innovatsiyalarni rivojlantirishda muhim vositaga aylandi. Ushbu
+                hisobot sun'iy intellektning asosiy tushunchalari, uning turli
+                sohalardagi qo'llanilishi va biznes ehtiyojlarini qondirish
+                uchun AI yechimlarini rejalashtirish va ishlab chiqish
+                jarayonlarini o'rganishga bag'ishlanadi.
+              </p>
+
+              <p class="mb-6">
+                Hisobotning maqsadi – korxona rahbariyatiga sun'iy intellektning
+                afzalliklari, xavf-xatarlari, axloqiy va huquqiy jihatlari hamda
+                ma'lumotlarga asoslangan yechimlar orqali tashkilotning
+                raqobatbardoshligini oshirish imkoniyatlari haqida aniq va
+                tushunarli ma'lumot taqdim etishdir.
+              </p>
+
+              <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-6">
+                <h3 class="text-xl font-semibold mb-4">Hisobot tuzilishi:</h3>
+                <ul class="space-y-3">
+                  <li>
+                    <strong
+                      >Sun'iy intellektning qo'llanilishi va foydalanish
+                      sohalari:</strong
+                    >
+                    AI tushunchalari, turlari, yo'nalishlari va turli
+                    sohalardagi ilovalari, shuningdek, axloqiy va tashkiliy
+                    omillar tahlil qilinadi.
+                  </li>
+                  <li>
+                    <strong>Ma'lumotlarni to'plash va tayyorlash:</strong> AI
+                    yechimlari uchun yuqori sifatli ma'lumotlarni ta'minlash
+                    jarayonlari, ma'lumot turlari va ularning biznes
+                    maqsadlariga muvofiqligi ko'rib chiqiladi.
+                  </li>
+                  <li>
+                    <strong>AI yechimini ishlab chiqish va baholash:</strong>
+                    Bashoratli tahlil usullari, chiziqli va logistik regressiya
+                    algoritmlari yordamida yechim ishlab chiqish, xatolarni
+                    baholash va modelning samaradorligini optimallashtirish
+                    masalalari o'rganiladi.
+                  </li>
+                </ul>
+              </div>
+
+              <p>
+                Ushbu hisobot tashkilotning operatsion ehtiyojlarini qondirish
+                uchun sun'iy intellekt yechimlarini muvaffaqiyatli joriy etishga
+                yordam berishga qaratilgan bo'lib, matematik va texnik
+                atamalardan to'g'ri foydalangan holda aniq va mantiqiy tuzilgan
+                ma'lumotlarni taqdim etadi.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Task A Section -->
+        <section id="task-a" class="mb-16">
+          <div
+            class="bg-gradient-to-r from-green-500 to-blue-500 text-white p-6 rounded-t-xl"
+          >
+            <h2 class="text-3xl font-bold">Topshiriq A</h2>
+          </div>
+
+          <!-- P1 Section -->
+          <div id="p1" class="bg-white rounded-b-xl shadow-lg p-8 mb-8">
+            <h3
+              class="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-green-500 pb-2"
+            >
+              A.P1 - Sun'iy Intellektning Ta'rifi va Asosiy Tushunchalari
+            </h3>
+            <div class="prose max-w-none text-gray-700 leading-relaxed">
+              <p class="text-lg mb-6">
+                Sun'iy intellekt (AI) – bu kompyuter tizimlarining inson aqliga
+                xos bo'lgan vazifalarni, masalan, o'rganish, muammolarni hal
+                qilish, qaror qabul qilish va idrok etish kabi jarayonlarni
+                bajarish qobiliyatini taqlid qilishga qaratilgan texnologiya va
+                ilmiy sohadir. AI tizimlari ma'lumotlarni tahlil qilish,
+                naqshlarni aniqlash va bashorat qilish orqali
+                avtomatlashtirilgan yechimlarni taqdim etadi.
+              </p>
+
+              <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div
+                  class="bg-green-50 border-l-4 border-green-500 p-6 rounded-lg"
+                >
+                  <h4 class="text-xl font-semibold mb-4">
+                    Kuchsiz AI (Narrow AI)
+                  </h4>
+                  <p>
+                    Muayyan vazifalarni bajarish uchun mo'ljallangan, cheklangan
+                    qobiliyatga ega tizimlar. Masalan, Siri yoki Google
+                    Translate kabi ilovalar tabiiy tilni qayta ishlash yoki
+                    tavsiya tizimlari kabi maxsus sohalarda ishlaydi.
+                  </p>
+                </div>
+                <div
+                  class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg"
+                >
+                  <h4 class="text-xl font-semibold mb-4">
+                    Kuchli AI (General AI)
+                  </h4>
+                  <p>
+                    Inson aqliga teng yoki undan yuqori darajadagi umumiy
+                    intellektual qobiliyatga ega bo'lgan, har qanday
+                    intellektual vazifani bajarishga qodir tizimlar. Hozirgi
+                    vaqtda faqat nazariy tushuncha sifatida mavjud.
+                  </p>
+                </div>
+              </div>
+
+              <h4 class="text-xl font-semibold mb-4">
+                Sun'iy Intellekt Turlari
+              </h4>
+              <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="space-y-4">
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <h5 class="font-semibold text-gray-800">
+                      1. Reaktiv mashinalar
+                    </h5>
+                    <p class="text-sm text-gray-600">
+                      Faqat joriy ma'lumotlarga asoslanib ishlovchi tizimlar.
+                      Xotiraga ega emas va o'tmish tajribasidan foydalanmaydi.
+                    </p>
+                  </div>
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <h5 class="font-semibold text-gray-800">
+                      2. Cheklangan xotira
+                    </h5>
+                    <p class="text-sm text-gray-600">
+                      O'tmishdagi ma'lumotlarni tahlil qilib, qaror qabul
+                      qilishda foydalanadigan tizimlar.
+                    </p>
+                  </div>
+                </div>
+                <div class="space-y-4">
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <h5 class="font-semibold text-gray-800">
+                      3. Ong nazariyasi
+                    </h5>
+                    <p class="text-sm text-gray-600">
+                      Boshqa agentlarning his-tuyg'ulari, niyatlari va
+                      e'tiqodlarini tushunish qobiliyatiga ega tizimlar.
+                    </p>
+                  </div>
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <h5 class="font-semibold text-gray-800">
+                      4. O'zini anglash
+                    </h5>
+                    <p class="text-sm text-gray-600">
+                      O'zini idrok etish va o'ziga xos ong sifatida harakat
+                      qilish qobiliyatiga ega AI.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <h4 class="text-xl font-semibold mb-4">
+                Sun'iy Intellekt Yo'nalishlari
+              </h4>
+              <div class="space-y-4 mb-8">
+                <div
+                  class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-lg"
+                >
+                  <h5 class="font-semibold">
+                    Mashinali o'rganish (Machine Learning)
+                  </h5>
+                  <p>
+                    Ma'lumotlardan naqshlarni aniqlash va bashorat qilish uchun
+                    algoritmlardan foydalanish.
+                  </p>
+                </div>
+                <div
+                  class="bg-green-50 border-l-4 border-green-500 p-4 rounded-lg"
+                >
+                  <h5 class="font-semibold">
+                    Kompyuter ko'rishi (Computer Vision)
+                  </h5>
+                  <p>
+                    Tasvirlar va videolarni tahlil qilish va ulardan ma'no
+                    chiqarish.
+                  </p>
+                </div>
+                <div
+                  class="bg-purple-50 border-l-4 border-purple-500 p-4 rounded-lg"
+                >
+                  <h5 class="font-semibold">
+                    Tabiiy tilni qayta ishlash (NLP)
+                  </h5>
+                  <p>Inson tilini tushunish va ishlab chiqarish.</p>
+                </div>
+                <div
+                  class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-lg"
+                >
+                  <h5 class="font-semibold">
+                    Chuqur o'rganish (Deep Learning)
+                  </h5>
+                  <p>
+                    Sun'iy neyron tarmoqlarga asoslangan mashinali o'rganishning
+                    kichik sohasi.
+                  </p>
+                </div>
+              </div>
+
+              <h4 class="text-xl font-semibold mb-4">Sanoatda Qo'llanilishi</h4>
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h5 class="font-semibold mb-3">
+                    Chakana savdo va elektron tijorat:
+                  </h5>
+                  <ul class="list-disc list-inside space-y-1 text-sm">
+                    <li>Mijozlar xatti-harakatlarini tahlil qilish</li>
+                    <li>Talabni bashorat qilish</li>
+                    <li>Inventarizatsiyani optimallashtirish</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 class="font-semibold mb-3">Transport va logistika:</h5>
+                  <ul class="list-disc list-inside space-y-1 text-sm">
+                    <li>Yo'nalishlarni optimallashtirish</li>
+                    <li>Yetkazib berish vaqtini qisqartirish</li>
+                    <li>Avtonom transport vositalarini boshqarish</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- P2 Section -->
+          <div id="p2" class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h3
+              class="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-green-500 pb-2"
+            >
+              A.P2 - Sun'iy Intellektning Afzalliklari va Xavf-Xatarlari
+            </h3>
+            <div class="prose max-w-none text-gray-700 leading-relaxed">
+              <p class="text-lg mb-6">
+                Sun'iy intellekt (AI) zamonaviy biznes va jamiyatning turli
+                sohalarda transformatsion imkoniyatlarini ta'minlaydi, lekin
+                uning qo'llanilishi bilan birga muhim xavf-xatarlar va
+                cheklovlar ham mavjud.
+              </p>
+
+              <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div
+                  class="bg-green-50 border-l-4 border-green-500 p-6 rounded-lg"
+                >
+                  <h4 class="text-xl font-semibold mb-4 text-green-800">
+                    Afzalliklar
+                  </h4>
+                  <ul class="space-y-3">
+                    <li class="flex items-start">
+                      <span class="text-green-600 mr-2">✓</span>
+                      <div>
+                        <strong>Operatsion samaradorlikni oshirish:</strong>
+                        <p class="text-sm text-gray-600">
+                          Avtomatlashtirish orqali vaqt va resurslarni tejash
+                        </p>
+                      </div>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-green-600 mr-2">✓</span>
+                      <div>
+                        <strong>Aniqlik:</strong>
+                        <p class="text-sm text-gray-600">
+                          Ma'lumotlarga asoslangan qarorlar inson xatolarini
+                          kamaytiradi
+                        </p>
+                      </div>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-green-600 mr-2">✓</span>
+                      <div>
+                        <strong>Shaxsiylashtirish:</strong>
+                        <p class="text-sm text-gray-600">
+                          Mijozlar uchun moslashtirilgan tajriba
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-lg">
+                  <h4 class="text-xl font-semibold mb-4 text-red-800">
+                    Xavf-Xatarlar
+                  </h4>
+                  <ul class="space-y-3">
+                    <li class="flex items-start">
+                      <span class="text-red-600 mr-2">⚠</span>
+                      <div>
+                        <strong>Ma'lumotlar xavfsizligi:</strong>
+                        <p class="text-sm text-gray-600">
+                          Shaxsiy ma'lumotlarning maxfiyligi muammolari
+                        </p>
+                      </div>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-red-600 mr-2">⚠</span>
+                      <div>
+                        <strong>Tarafkashlik:</strong>
+                        <p class="text-sm text-gray-600">
+                          Noto'g'ri ma'lumotlarga asoslangan xolis qarorlar
+                        </p>
+                      </div>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-red-600 mr-2">⚠</span>
+                      <div>
+                        <strong>Ish o'rinlari qisqarishi:</strong>
+                        <p class="text-sm text-gray-600">
+                          Avtomatlashtirish natijasida ishsizlik
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <h4 class="text-xl font-semibold mb-4">Sohalarga Ta'siri</h4>
+              <div class="space-y-6">
+                <div class="bg-blue-50 p-6 rounded-lg">
+                  <h5 class="text-lg font-semibold mb-3">
+                    Chakana Savdo va Elektron Tijorat
+                  </h5>
+                  <div class="grid md:grid-cols-3 gap-4">
+                    <div>
+                      <strong class="text-green-600">Afzalliklar:</strong>
+                      <ul class="text-sm mt-2 space-y-1">
+                        <li>• Shaxsiy tavsiyalar</li>
+                        <li>• Talabni bashorat qilish</li>
+                        <li>• Mijoz xizmatini avtomatlashtirish</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <strong class="text-red-600">Xavf-Xatarlar:</strong>
+                      <ul class="text-sm mt-2 space-y-1">
+                        <li>• Maxfiylik muammolari</li>
+                        <li>• Xolis tavsiyalar xavfi</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <strong class="text-yellow-600">Kamchiliklar:</strong>
+                      <ul class="text-sm mt-2 space-y-1">
+                        <li>• Yuqori joriy etish xarajatlari</li>
+                        <li>• Ma'lumotlar sifatiga bog'liqlik</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-green-50 p-6 rounded-lg">
+                  <h5 class="text-lg font-semibold mb-3">Sog'liqni Saqlash</h5>
+                  <div class="grid md:grid-cols-3 gap-4">
+                    <div>
+                      <strong class="text-green-600">Afzalliklar:</strong>
+                      <ul class="text-sm mt-2 space-y-1">
+                        <li>• Tez va aniq diagnostika</li>
+                        <li>• Davolashni optimallashtirish</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <strong class="text-red-600">Xavf-Xatarlar:</strong>
+                      <ul class="text-sm mt-2 space-y-1">
+                        <li>• Noto'g'ri diagnostika</li>
+                        <li>• Ma'lumotlarning oshkor bo'lishi</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <strong class="text-yellow-600">Kamchiliklar:</strong>
+                      <ul class="text-sm mt-2 space-y-1">
+                        <li>• Tushuntirishning qiyinligi</li>
+                        <li>• Qimmat infratuzilma</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- M1 Section -->
+          <div id="m1" class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h3
+              class="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-green-500 pb-2"
+            >
+              A.M1 - Tahlilning Umumiy Yondashuvi
+            </h3>
+            <div class="prose max-w-none text-gray-700 leading-relaxed">
+              <p class="text-lg mb-6">
+                AI'ning ta'sirini tahlil qilish uchun quyidagi omillar hisobga
+                olinadi: afzalliklar, xavf-xatarlar va kamchiliklar. Tahlil har
+                bir soha bo'yicha AI'ning ijobiy va salbiy ta'sirlarini
+                muvozanatlashtirishga qaratilgan.
+              </p>
+
+              <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-8">
+                <h4 class="text-xl font-semibold mb-4">Tahlil Mezonlari</h4>
+                <ul class="space-y-2">
+                  <li>
+                    <strong>Afzalliklar:</strong> Operatsion samaradorlik,
+                    xarajatlar tejamkorligi, qaror qabul qilish sifati
+                  </li>
+                  <li>
+                    <strong>Xavf-Xatarlar:</strong> Axloqiy muammolar,
+                    kiberxavfsizlik, ijtimoiy-iqtisodiy oqibatlar
+                  </li>
+                  <li>
+                    <strong>Kamchiliklar:</strong> Yuqori xarajatlar,
+                    ma'lumotlarga bog'liqlik, cheklangan moslashuvchanlik
+                  </li>
+                </ul>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-blue-50 p-6 rounded-lg">
+                  <h4 class="text-lg font-semibold mb-4">
+                    Chakana Savdo - Iqtisodiy Ta'sir
+                  </h4>
+                  <div class="space-y-3">
+                    <div class="bg-green-100 p-3 rounded">
+                      <strong class="text-green-800">Foyda:</strong>
+                      <p class="text-sm">
+                        Amazon AI yordamida sotuvlarini 35% ga oshirgan,
+                        inventarizatsiya xarajatlarini 10-15% ga kamaytirgan
+                      </p>
+                    </div>
+                    <div class="bg-red-100 p-3 rounded">
+                      <strong class="text-red-800">Xavf:</strong>
+                      <p class="text-sm">
+                        Dastlabki investitsiyalar kichik bizneslar uchun to'siq
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-green-50 p-6 rounded-lg">
+                  <h4 class="text-lg font-semibold mb-4">
+                    Sog'liqni Saqlash - Operatsion Ta'sir
+                  </h4>
+                  <div class="space-y-3">
+                    <div class="bg-green-100 p-3 rounded">
+                      <strong class="text-green-800">Samaradorlik:</strong>
+                      <p class="text-sm">
+                        Google Health'ning AI algoritmi ko'krak saratonini 94%
+                        aniqlik bilan aniqlaydi
+                      </p>
+                    </div>
+                    <div class="bg-yellow-100 p-3 rounded">
+                      <strong class="text-yellow-800">Kamchilik:</strong>
+                      <p class="text-sm">
+                        AI'ning "qora quti" tabiati qarorlarning shaffofligini
+                        cheklaydi
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- D1 Section -->
+          <div id="d1" class="bg-white rounded-xl shadow-lg p-8">
+            <h3
+              class="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-green-500 pb-2"
+            >
+              A.D1 - Baholashning Umumiy Yondashuvi
+            </h3>
+            <div class="prose max-w-none text-gray-700 leading-relaxed">
+              <p class="text-lg mb-6">
+                Sun'iy intellekt turli sohalarda transformatsion imkoniyatlar
+                taqdim etib, iqtisodiy, ijtimoiy va operatsion o'zgarishlarni
+                keltirib chiqarmoqda. Har bir soha bo'yicha afzalliklar,
+                xavf-xatarlar va kamchiliklarning ta'siri sinchkovlik bilan
+                baholanadi.
+              </p>
+
+              <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
+                <h4 class="text-xl font-semibold mb-4">Baholash Mezonlari</h4>
+                <div class="grid md:grid-cols-3 gap-4">
+                  <div>
+                    <strong>Iqtisodiy ta'sir:</strong>
+                    <p class="text-sm mt-1">
+                      Xarajatlarni kamaytirish, daromadni oshirish, investitsiya
+                      samaradorligi
+                    </p>
+                  </div>
+                  <div>
+                    <strong>Ijtimoiy ta'sir:</strong>
+                    <p class="text-sm mt-1">
+                      Ish o'rinlari, maxfiylik, axloqiy muammolar, jamiyat
+                      qutblanishi
+                    </p>
+                  </div>
+                  <div>
+                    <strong>Operatsion ta'sir:</strong>
+                    <p class="text-sm mt-1">
+                      Jarayonlarni optimallashtirish, aniqlik, mijoz tajribasini
+                      yaxshilash
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="space-y-8">
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                  <h4 class="text-lg font-semibold mb-4">
+                    Chakana Savdo - Umumiy Baholash
+                  </h4>
+                  <div class="grid md:grid-cols-3 gap-4">
+                    <div class="bg-green-50 p-4 rounded">
+                      <h5 class="font-semibold text-green-800">
+                        Ijobiy Ta'sir
+                      </h5>
+                      <ul class="text-sm mt-2 space-y-1">
+                        <li>• Sotuvlarni 35% oshirish</li>
+                        <li>• Mijoz qoniqishini oshirish</li>
+                        <li>• Operatsion xarajatlarni kamaytirish</li>
+                      </ul>
+                    </div>
+                    <div class="bg-red-50 p-4 rounded">
+                      <h5 class="font-semibold text-red-800">Salbiy Ta'sir</h5>
+                      <ul class="text-sm mt-2 space-y-1">
+                        <li>• Maxfiylik muammolari</li>
+                        <li>• Ish o'rinlari qisqarishi</li>
+                        <li>• Kichik bizneslar uchun to'siqlar</li>
+                      </ul>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded">
+                      <h5 class="font-semibold text-blue-800">Tavsiyalar</h5>
+                      <ul class="text-sm mt-2 space-y-1">
+                        <li>• Ma'lumotlar sifatini ta'minlash</li>
+                        <li>• Axloqiy qoidalarga rioya</li>
+                        <li>• Bosqichma-bosqich joriy etish</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                  <h4 class="text-lg font-semibold mb-4">
+                    Sog'liqni Saqlash - Umumiy Baholash
+                  </h4>
+                  <div class="grid md:grid-cols-3 gap-4">
+                    <div class="bg-green-50 p-4 rounded">
+                      <h5 class="font-semibold text-green-800">
+                        Ijobiy Ta'sir
+                      </h5>
+                      <ul class="text-sm mt-2 space-y-1">
+                        <li>• Diagnostika aniqligini oshirish</li>
+                        <li>• Hayotni saqlash</li>
+                        <li>• Xarajatlarni 15% kamaytirish</li>
+                      </ul>
+                    </div>
+                    <div class="bg-red-50 p-4 rounded">
+                      <h5 class="font-semibold text-red-800">Salbiy Ta'sir</h5>
+                      <ul class="text-sm mt-2 space-y-1">
+                        <li>• Noto'g'ri qarorlar xavfi</li>
+                        <li>• Maxfiylik buzilishi</li>
+                        <li>• Ishonchsizlik</li>
+                      </ul>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded">
+                      <h5 class="font-semibold text-blue-800">Tavsiyalar</h5>
+                      <ul class="text-sm mt-2 space-y-1">
+                        <li>• Tushuntiriladigan AI</li>
+                        <li>• Qat'iy ma'lumotlar nazorati</li>
+                        <li>• Axloqiy qoidalar</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-gray-50 p-6 rounded-lg mt-8">
+                <h4 class="text-lg font-semibold mb-4">Yakuniy Xulosa</h4>
+                <p>
+                  Sun'iy intellekt turli sohalarda katta afzalliklarni taqdim
+                  etadi, ammo ma'lumotlar maxfiyligi, tarafkashlik va ijtimoiy
+                  ta'sir kabi xavf-xatarlar e'tiborga olinishi zarur.
+                  Tashkilotlar AI'ni joriy etishda afzalliklar va
+                  xavf-xatarlarni muvozanatlashtirishi, axloqiy qoidalarga rioya
+                  qilishi va uzoq muddatli barqaror ta'sirni ta'minlashi lozim.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Task B Section -->
+        <section id="task-b" class="mb-16">
+          <div
+            class="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-6 rounded-t-xl"
+          >
+            <h2 class="text-3xl font-bold">Topshiriq B</h2>
+          </div>
+
+          <!-- P3 Section -->
+          <div id="p3" class="bg-white rounded-b-xl shadow-lg p-8 mb-8">
+            <h3
+              class="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-purple-500 pb-2"
+            >
+              B.P3 - Loyiha Maqsadlari
+            </h3>
+            <div class="prose max-w-none text-gray-700 leading-relaxed">
+              <p class="text-lg mb-6">
+                Loyihaning boshlanishida sun'iy intellekt yechimini
+                muvaffaqiyatli amalga oshirish uchun aniq, strategik va
+                o'lchanadigan maqsadlar belgilashga alohida e'tibor qaratildi.
+                Ushbu loyiha Bank Marketing dataseti (UCI Machine Learning
+                Repository, ID: 222) asosida tuzildi va mijozlarning muddatli
+                depozitga obuna bo'lish ehtimolini bashorat qilishga qaratildi.
+              </p>
+              <img src="images/Screenshot 2025-06-11 010929.png" alt="" />
+              <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
+                <h4 class="text-xl font-semibold mb-4">Dataset Ma'lumotlari</h4>
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <p>
+                      <strong>Manba:</strong> UCI Machine Learning Repository
+                    </p>
+                    <p><strong>Dataset ID:</strong> 222</p>
+                    <p><strong>Namunalar soni:</strong> 45,211</p>
+                    <p><strong>Xususiyatlar soni:</strong> 20</p>
+                  </div>
+                  <div>
+                    <p>
+                      <strong>Maqsadli o'zgaruvchi:</strong> y (obuna bo'lish)
+                    </p>
+                    <p><strong>Muammo turi:</strong> Ikkilik tasniflash</p>
+                    <p>
+                      <strong>URL:</strong>
+                      <a
+                        href="https://archive.ics.uci.edu/dataset/222/bank+marketing"
+                        class="text-blue-600 hover:underline"
+                        >Bank Marketing Dataset</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <h4 class="text-xl font-semibold mb-4">
+                Loyihaning Aniqroq Maqsadlari
+              </h4>
+              <div class="space-y-6">
+                <div
+                  class="bg-green-50 border-l-4 border-green-500 p-6 rounded-lg"
+                >
+                  <h5 class="text-lg font-semibold mb-3">
+                    1. Bashorat Qilish Aniqligini Oshirish
+                  </h5>
+                  <p>
+                    Qaysi mijozlar muddatli depozitga obuna bo'lish ehtimoli
+                    yuqori ekanligini yuqori darajada aniqlik bilan bashorat
+                    qilish va marketing harakatlarini faqat ushbu segmentlarga
+                    yo'naltirish. Bu marketing kampaniyalarining samaradorligini
+                    oshirish, mijozlarning qiziqishini jalb qilish va obuna
+                    bo'lish darajasini ko'tarish imkonini beradi.
+                  </p>
+                </div>
+
+                <div
+                  class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg"
+                >
+                  <h5 class="text-lg font-semibold mb-3">
+                    2. Resurslarni Optimallashtirish
+                  </h5>
+                  <p>
+                    Marketing kampaniyalari uchun sarflanadigan resurslar –
+                    vaqt, moliyaviy xarajatlar va xodimlar kuchi – ni samarali
+                    boshqarishga e'tibor qaratildi. Model yordamida obuna
+                    bo'lish ehtimoli yuqori bo'lgan mijozlar segmentini aniqlash
+                    orqali keraksiz aloqalarni kamaytirish va faqat potensial
+                    mijozlarga yo'naltirilgan strategiyalarni qo'llash ko'zda
+                    tutildi.
+                  </p>
+                </div>
+
+                <div
+                  class="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-lg"
+                >
+                  <h5 class="text-lg font-semibold mb-3">
+                    3. Mijozlarning Qaroriga Ta'sir Qiluvchi Omillarni Tahlil
+                    Qilish
+                  </h5>
+                  <p>
+                    Mijozning demografik ma'lumotlari (yoshi, kasbi, ta'lim
+                    darajasi), aloqa turi, aloqa davomiyligi va oldingi
+                    kampaniya natijalari kabi xususiyatlarning obuna bo'lish
+                    ehtimoliga qanday ta'sir qilishi o'rganildi. Bu tahlil
+                    natijasida qaysi omillar eng katta ahamiyatga ega ekanligi
+                    aniqlandi.
+                  </p>
+                </div>
+
+                <div
+                  class="bg-purple-50 border-l-4 border-purple-500 p-6 rounded-lg"
+                >
+                  <h5 class="text-lg font-semibold mb-3">
+                    4. Ma'lumotlarga Asoslangan Qarorlar Qabul Qilishda Yordam
+                    Berish
+                  </h5>
+                  <p>
+                    Loyiha bank rahbariyatiga ma'lumotlarga asoslangan qarorlar
+                    qabul qilishda yordam beruvchi vosita sifatida xizmat qilish
+                    maqsadini ko'zda tutdi. Model yordamida olingan natijalar
+                    marketing kampaniyalarining samaradorligini oshirish,
+                    mijozlar bilan ishlash bo'yicha strategiyalarni
+                    takomillashtirish va bankning raqobatbardoshligini
+                    mustahkamlash imkonini beradi.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- P4 Section -->
+          <div id="p4" class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h3
+              class="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-purple-500 pb-2"
+            >
+              B.P4 - Ma'lumotlar To'plamini Yig'ish va Tayyorlash
+            </h3>
+            <div class="prose max-w-none text-gray-700 leading-relaxed">
+              <h4 class="text-xl font-semibold mb-4">
+                1. Maqsad va Tanlangan Ma'lumotlar To'plami
+              </h4>
+              <p class="mb-6">
+                Sun'iy intellekt yechimi mijozlarning bank depozitiga obuna
+                bo'lishini bashorat qilish uchun ishlab chiqilmoqda. UCI Machine
+                Learning Repository'dan "Bank Marketing" ma'lumotlar to'plami
+                tanlandi.
+              </p>
+
+              <div class="bg-gray-50 p-6 rounded-lg mb-8">
+                <h5 class="text-lg font-semibold mb-3">
+                  Dataset Xususiyatlari
+                </h5>
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h6 class="font-semibold mb-2">Demografik Ma'lumotlar:</h6>
+                    <ul class="text-sm space-y-1">
+                      <li>• Yosh (age)</li>
+                      <li>• Kasb (job)</li>
+                      <li>• Oilaviy holat (marital)</li>
+                      <li>• Ta'lim darajasi (education)</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h6 class="font-semibold mb-2">Moliyaviy Ma'lumotlar:</h6>
+                    <ul class="text-sm space-y-1">
+                      <li>• Balans (balance)</li>
+                      <li>• Uy krediti (housing)</li>
+                      <li>• Shaxsiy kredit (loan)</li>
+                      <li>• Kredit holati (default)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <h4 class="text-xl font-semibold mb-4">
+                2. Ma'lumotlarni Yig'ish Jarayoni
+              </h4>
+              <div class="space-y-4 mb-8">
+                <div
+                  class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-lg"
+                >
+                  <h5 class="font-semibold">Maqsadni aniqlash:</h5>
+                  <p class="text-sm">
+                    Loyiha maqsadi mijozlarning depozitga obuna bo'lish
+                    ehtimolini bashorat qilish edi. Bu tasniflash muammosi
+                    sifatida belgilandi.
+                  </p>
+                </div>
+                <div
+                  class="bg-green-50 border-l-4 border-green-500 p-4 rounded-lg"
+                >
+                  <h5 class="font-semibold">Manba tanlash:</h5>
+                  <p class="text-sm">
+                    UCI Machine Learning Repository ochiq va ishonchli manba
+                    sifatida tanlandi.
+                  </p>
+                </div>
+                <div
+                  class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-lg"
+                >
+                  <h5 class="font-semibold">Ma'lumotlarni yuklash:</h5>
+                  <p class="text-sm">
+                    Python'dagi ucimlrepo kutubxonasi yordamida yuklandi va
+                    pandas DataFrame formatida qayta ishlandi.
+                  </p>
+                </div>
+              </div>
+
+              <h4 class="text-xl font-semibold mb-4">
+                3. Ma'lumotlarni Tayyorlash Jarayoni
+              </h4>
+              <div class="space-y-6">
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                  <h5 class="text-lg font-semibold mb-3">
+                    Ma'lumotlarni Tozalash
+                  </h5>
+                  <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <h6 class="font-semibold mb-2">
+                        Yo'qolgan qiymatlar (NaN):
+                      </h6>
+                      <p class="text-sm">
+                        Kategoriyali ustunlarda yo'qolgan qiymatlar eng ko'p
+                        uchraydigan qiymat (mode) bilan to'ldirildi.
+                      </p>
+                    </div>
+                    <div>
+                      <h6 class="font-semibold mb-2">"Unknown" qiymatlar:</h6>
+                      <p class="text-sm">
+                        Kategoriyali ustunlarda "unknown" qiymatlar ham mode
+                        bilan almashtirildi.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                  <h5 class="text-lg font-semibold mb-3">
+                    Anomaliyalarni Bartaraf Qilish
+                  </h5>
+                  <p class="mb-3">
+                    Sonli ustunlar uchun anomaliyalar IQR (Interquartile Range)
+                    usuli yordamida aniqlandi:
+                  </p>
+                  <div class="bg-gray-50 p-4 rounded">
+                    <code class="text-sm">
+                      IQR = Q3 - Q1<br />
+                      lower_bound = Q1 - 1.5 * IQR<br />
+                      upper_bound = Q3 + 1.5 * IQR
+                    </code>
+                  </div>
+                  <p class="text-sm mt-3">
+                    Natija: To'plam hajmi 45,211 dan taxminan 40,000 yozuvgacha
+                    kamaydi.
+                  </p>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                  <h5 class="text-lg font-semibold mb-3">
+                    Ma'lumotlarni Kodlash
+                  </h5>
+                  <div class="space-y-3">
+                    <p>
+                      <strong>OrdinalEncoder:</strong> Kategoriyali ustunlar
+                      tartibli raqamlarga aylantirildi.
+                    </p>
+                    <p>
+                      <strong>Maqsadli o'zgaruvchi:</strong> y ustunidagi
+                      "yes"=1 va "no"=0 sifatida kodlandi.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                  <h5 class="text-lg font-semibold mb-3">
+                    Ma'lumotlarni Standartlashtirish
+                  </h5>
+                  <p class="mb-3">
+                    StandardScaler yordamida standartlashtirish amalga
+                    oshirildi:
+                  </p>
+                  <div class="bg-gray-50 p-4 rounded">
+                    <code class="text-sm">(x - mean) / std</code>
+                  </div>
+                  <p class="text-sm mt-3">
+                    Natijada o'rtacha 0 va dispersiya 1 ga teng bo'ldi.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- M2 Section -->
+          <div id="m2" class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h3
+              class="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-purple-500 pb-2"
+            >
+              B.M2 - Ma'lumotlar To'plamini Ko'rib Chiqish (EDA)
+            </h3>
+            <div class="prose max-w-none text-gray-700 leading-relaxed">
+              <p class="text-lg mb-6">
+                "Bank_Marketing" dataseti quyidagi xususiyatlarga ega va
+                sifatini baholash uchun tahlil qilindi:
+              </p>
+
+              <h4 class="text-xl font-semibold mb-4">
+                Vizualizatsiya va Taqsimot
+              </h4>
+              <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div
+                  class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg"
+                >
+                  <h5 class="text-lg font-semibold mb-3">Yosh Taqsimoti</h5>
+                  <p class="text-sm mb-2">
+                    Yoshning o'rtacha qiymati no guruhida 40.8, yes guruhida
+                    41.7. Boxplotdan ko'rinadiki, yosh taqsimoti ikkala sinfda
+                    o'xshash, lekin yes guruhida biroz kengroq tarqalish mavjud.
+                  </p>
+                  <div class="bg-white p-3 rounded border">
+                    <p class="text-xs text-gray-600">
+                      Bu yoshning depozitga yozilishga kichik ta'sir
+                      ko'rsatishini anglatadi.
+                    </p>
+                  </div>
+                </div>
+                <img src="images/2.png" alt="" />
+                <img src="images/3.png" alt="" />
+
+                <div
+                  class="bg-green-50 border-l-4 border-green-500 p-6 rounded-lg"
+                >
+                  <h5 class="text-lg font-semibold mb-3">Balans Tahlili</h5>
+                  <p class="text-sm mb-2">
+                    Yes guruhida o'rtacha balans (1804 evro) no guruhiga (1283
+                    evro) nisbatan yuqori. Anomaliyalar (outliers) ko'p, bu IQR
+                    usuli bilan tozalanadi.
+                  </p>
+                  <div class="bg-white p-3 rounded border">
+                    <p class="text-xs text-gray-600">
+                      Balans depozitga yozilish ehtimolini oshirishi mumkin.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <h4 class="text-xl font-semibold mb-4">
+                Muhim Xususiyatlar Tahlili
+              </h4>
+              <div class="space-y-6">
+                <div
+                  class="bg-yellow-50 border border-yellow-200 rounded-lg p-6"
+                >
+                  <h5 class="text-lg font-semibold mb-3">
+                    Aloqa Muddati (Duration)
+                  </h5>
+                  <p class="mb-3">
+                    Yes guruhida o'rtacha aloqa muddati (537 sekund) no guruhiga
+                    (221 sekund) nisbatan ancha yuqori.
+                  </p>
+                  <div class="bg-yellow-100 p-3 rounded">
+                    <p class="text-sm font-semibold">
+                      Bu o'zgaruvchi depozitga yozilish bilan kuchli bog'liq,
+                      chunki uzoq suhbatlar muvaffaqiyat ehtimolini oshiradi.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="bg-red-50 border border-red-200 rounded-lg p-6">
+                  <h5 class="text-lg font-semibold mb-3">
+                    Aloqa Soni (Campaign)
+                  </h5>
+                  <p class="mb-3">
+                    No guruhida o'rtacha aloqa soni (2.8) yes guruhiga (2.1)
+                    nisbatan yuqori.
+                  </p>
+                  <div class="bg-red-100 p-3 rounded">
+                    <p class="text-sm font-semibold">
+                      Ko'p aloqa muvaffaqiyatsizlikka olib kelishi mumkin.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <h4 class="text-xl font-semibold mb-4">
+                Kategoriyali Xususiyatlar
+              </h4>
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                  <div class="bg-blue-50 p-4 rounded-lg">
+                    <h6 class="font-semibold mb-2">Kasb (Job)</h6>
+                    <ul class="text-sm space-y-1">
+                      <li>• Student: 22% obuna nisbati</li>
+                      <li>• Retired: 22.8% obuna nisbati</li>
+                      <li>• Blue-collar: 7.3% obuna nisbati</li>
+                    </ul>
+                  </div>
+
+                  <div class="bg-green-50 p-4 rounded-lg">
+                    <h6 class="font-semibold mb-2">Ta'lim (Education)</h6>
+                    <ul class="text-sm space-y-1">
+                      <li>• Tertiary: 15% eng yuqori</li>
+                      <li>• Secondary: o'rtacha</li>
+                      <li>• Primary: 8.6% eng past</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="space-y-4">
+                  <div class="bg-purple-50 p-4 rounded-lg">
+                    <h6 class="font-semibold mb-2">Aloqa Turi (Contact)</h6>
+                    <ul class="text-sm space-y-1">
+                      <li>• Cellular: 14.9% eng yuqori</li>
+                      <li>• Telephone: 6.7% eng past</li>
+                    </ul>
+                  </div>
+
+                  <div class="bg-orange-50 p-4 rounded-lg">
+                    <h6 class="font-semibold mb-2">Oy (Month)</h6>
+                    <ul class="text-sm space-y-1">
+                      <li>• March: 47.9% eng yuqori</li>
+                      <li>• September: 46.4%</li>
+                      <li>• May: 6.7% eng past</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-gray-50 p-6 rounded-lg mt-8">
+                <h4 class="text-lg font-semibold mb-4">
+                  Xulosa va Keyingi Qadamlar
+                </h4>
+                <div class="space-y-3">
+                  <p>
+                    <strong>Asosiy topilmalar:</strong> duration (r ≈ 0.39) va
+                    poutcome obuna qaroriga eng katta ta'sir ko'rsatadi. Uzoq
+                    suhbatlar va oldingi kampaniyada muvaffaqiyat yuqori obuna
+                    ehtimolini ko'rsatadi.
+                  </p>
+                  <p>
+                    <strong>Sinf muvozanatsizligi:</strong> 88.3% "no", 11.7%
+                    "yes" - bu model sifatiga ta'sir qilishi mumkin.
+                  </p>
+                  <p>
+                    <strong>Tavsiyalar:</strong> Ma'lumotlarni tayyorlash,
+                    xususiyat muhandisligi va sinf muvozanatsizligini bartaraf
+                    etish zarur.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- D2 Section -->
+          <div id="d2" class="bg-white rounded-xl shadow-lg p-8">
+            <h3
+              class="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-purple-500 pb-2"
+            >
+              B.D2 - Samaradorlik Baholash
+            </h3>
+            <div class="prose max-w-none text-gray-700 leading-relaxed">
+              <p class="text-lg mb-6">
+                "Bank Marketing" ma'lumotlar to'plami asosida mijozlarning
+                depozitga obuna bo'lishini bashorat qiluvchi sun'iy intellekt
+                yechimi ishlab chiqildi. Linear Regression va Logistic
+                Regression algoritmlariga asoslangan yechimning samaradorligi
+                matematik ko'rsatkichlar asosida baholanadi.
+              </p>
+              <img src="images/4.png" alt="" />
+              <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
+                <h4 class="text-xl font-semibold mb-4">Baholash Mezonlari</h4>
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <h5 class="font-semibold">Logistic Regression:</h5>
+                    <ul class="text-sm mt-2 space-y-1">
+                      <li>• Aniqlik (Accuracy)</li>
+                      <li>• F1-ball</li>
+                      <li>• To'liqlik (Recall)</li>
+                      <li>• Confusion Matrix</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 class="font-semibold">Linear Regression:</h5>
+                    <ul class="text-sm mt-2 space-y-1">
+                      <li>• MAE (Mean Absolute Error)</li>
+                      <li>• RMSE (Root Mean Squared Error)</li>
+                      <li>• R² koeffitsienti</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <h4 class="text-xl font-semibold mb-4">
+                Logistic Regression Natijalari
+              </h4>
+              <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-green-50 border border-green-200 rounded-lg p-6">
+                  <h5 class="text-lg font-semibold text-green-800 mb-3">
+                    Aniqlik
+                  </h5>
+                  <div class="text-3xl font-bold text-green-600 mb-2">89%</div>
+                  <p class="text-sm">
+                    SMOTE qo'llanilishidan so'ng 85% dan 89% ga oshdi
+                  </p>
+                </div>
+
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                  <h5 class="text-lg font-semibold text-blue-800 mb-3">
+                    F1-ball
+                  </h5>
+                  <div class="text-3xl font-bold text-blue-600 mb-2">0.75</div>
+                  <p class="text-sm">
+                    "Yes" sinfi uchun, SMOTE dan oldin 0.65 edi
+                  </p>
+                </div>
+
+                <div
+                  class="bg-purple-50 border border-purple-200 rounded-lg p-6"
+                >
+                  <h5 class="text-lg font-semibold text-purple-800 mb-3">
+                    To'liqlik
+                  </h5>
+                  <div class="text-3xl font-bold text-purple-600 mb-2">
+                    0.78
+                  </div>
+                  <p class="text-sm">
+                    Potensial mijozlarning 78% ni to'g'ri aniqladi
+                  </p>
+                </div>
+              </div>
+              <img src="images/5.png" alt="" />
+
+              <h4 class="text-xl font-semibold mb-4">
+                Linear Regression Natijalari
+              </h4>
+              <div class="space-y-6">
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                  <h5 class="text-lg font-semibold mb-4">
+                    Oddiy Chiziqli Regressiya (faqat age)
+                  </h5>
+                  <div class="grid md:grid-cols-3 gap-4">
+                    <div class="text-center">
+                      <div class="text-2xl font-bold text-red-600">220.5s</div>
+                      <p class="text-sm text-gray-600">MAE</p>
+                    </div>
+                    <div class="text-center">
+                      <div class="text-2xl font-bold text-red-600">310.2s</div>
+                      <p class="text-sm text-gray-600">RMSE</p>
+                    </div>
+                    <div class="text-center">
+                      <div class="text-2xl font-bold text-red-600">0.12</div>
+                      <p class="text-sm text-gray-600">R²</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                  <h5 class="text-lg font-semibold mb-4">
+                    Ko'p O'zgaruvchili Regressiya
+                  </h5>
+                  <div class="grid md:grid-cols-3 gap-4">
+                    <div class="text-center">
+                      <div class="text-2xl font-bold text-yellow-600">
+                        180.3s
+                      </div>
+                      <p class="text-sm text-gray-600">MAE</p>
+                    </div>
+                    <div class="text-center">
+                      <div class="text-2xl font-bold text-yellow-600">
+                        250.7s
+                      </div>
+                      <p class="text-sm text-gray-600">RMSE</p>
+                    </div>
+                    <div class="text-center">
+                      <div class="text-2xl font-bold text-yellow-600">0.35</div>
+                      <p class="text-sm text-gray-600">R²</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-gray-50 p-6 rounded-lg mt-8">
+                <h4 class="text-lg font-semibold mb-4">
+                  Biznes Maqsadlariga Mosligi
+                </h4>
+                <p class="mb-4">
+                  Logistic Regression modeli bankning biznes maqsadlariga
+                  (potensial mijozlarni aniqlash) yuqori darajada mos keldi,
+                  chunki 89% aniqlik va 0.75 F1-ball potensial mijozlarni
+                  aniqlashda ishonchli natijalar berdi.
+                </p>
+                <p>
+                  Linear Regression modeli esa duration ni bashorat qilishda
+                  cheklangan samaradorlik ko'rsatdi (R² = 0.35), bu biznes uchun
+                  qo'shimcha tahlil yoki boshqa algoritmlar talab qilinishi
+                  mumkinligini ko'rsatdi.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Task C Section -->
+        <section id="task-c" class="mb-16">
+          <div
+            class="bg-gradient-to-r from-red-500 to-orange-500 text-white p-6 rounded-t-xl"
+          >
+            <h2 class="text-3xl font-bold">Topshiriq C</h2>
+          </div>
+
+          <!-- P5 Section -->
+          <div id="p5" class="bg-white rounded-b-xl shadow-lg p-8 mb-8">
+            <h3
+              class="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-red-500 pb-2"
+            >
+              C.P5 - Yechim Ishlab Chiqish
+            </h3>
+            <div class="prose max-w-none text-gray-700 leading-relaxed">
+              <p class="text-lg mb-6">
+                "Bank Marketing" ma'lumotlar to'plami asosida mijozlarning
+                depozitga obuna bo'lishini bashorat qiluvchi sun'iy intellekt
+                yechimi ishlab chiqildi. Python dasturlash tili va pandas hamda
+                scikit-learn hisoblash vositalaridan foydalangan holda yechimni
+                ishlab chiqish jarayoni tasvirlanadi.
+              </p>
+
+              <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
+                <h4 class="text-xl font-semibold mb-4">
+                  Dasturlash Tili va Hisoblash Vositalari
+                </h4>
+                <div class="grid md:grid-cols-3 gap-4">
+                  <div class="bg-white p-4 rounded-lg border">
+                    <h5 class="font-semibold text-blue-800 mb-2">Python</h5>
+                    <p class="text-sm">
+                      Asosiy dasturlash tili, ma'lumotlarni tahlil qilish va
+                      mashinaviy o'qitish uchun
+                    </p>
+                  </div>
+                  <div class="bg-white p-4 rounded-lg border">
+                    <h5 class="font-semibold text-green-800 mb-2">pandas</h5>
+                    <p class="text-sm">
+                      Ma'lumotlarni yuklash, tozalash, kodlash va tahrirlash
+                      uchun
+                    </p>
+                  </div>
+                  <div class="bg-white p-4 rounded-lg border">
+                    <h5 class="font-semibold text-purple-800 mb-2">
+                      scikit-learn
+                    </h5>
+                    <p class="text-sm">
+                      Algoritmlarni amalga oshirish va modelni baholash uchun
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <h4 class="text-xl font-semibold mb-4">
+                Ma'lumotlarni Tayyorlash Jarayoni
+              </h4>
+              <div class="space-y-6 mb-8">
+                <div
+                  class="bg-green-50 border-l-4 border-green-500 p-6 rounded-lg"
+                >
+                  <h5 class="text-lg font-semibold mb-3">1. Tozalash</h5>
+                  <p class="mb-3">
+                    Kategoriyali ustunlarda yo'qolgan va "unknown" qiymatlar eng
+                    ko'p uchraydigan qiymat bilan to'ldirildi:
+                  </p>
+                  <ul class="text-sm space-y-1">
+                    <li>• education da "secondary" bilan</li>
+                    <li>• poutcome da "failure" bilan</li>
+                  </ul>
+                </div>
+
+                <div
+                  class="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-lg"
+                >
+                  <h5 class="text-lg font-semibold mb-3">
+                    2. Anomaliyalarni Olib Tashlash
+                  </h5>
+                  <p class="mb-3">
+                    IQR usuli yordamida anomaliyalar aniqlandi va olib
+                    tashlandi:
+                  </p>
+                  <div class="bg-white p-3 rounded border">
+                    <code class="text-sm"
+                      >Q1 - 1.5 * IQR va Q3 + 1.5 * IQR</code
+                    >
+                  </div>
+                  <p class="text-sm mt-2">
+                    Natija: To'plam hajmi ~40,000 yozuvgacha kamaydi
+                  </p>
+                </div>
+
+                <div
+                  class="bg-purple-50 border-l-4 border-purple-500 p-6 rounded-lg"
+                >
+                  <h5 class="text-lg font-semibold mb-3">
+                    3. Kodlash va Standartlashtirish
+                  </h5>
+                  <ul class="space-y-2">
+                    <li>
+                      <strong>OrdinalEncoder:</strong> Kategoriyali xususiyatlar
+                      raqamli shaklga keltirildi
+                    </li>
+                    <li>
+                      <strong>StandardScaler:</strong> Sonli xususiyatlar
+                      standartlashtirildi
+                    </li>
+                    <li>
+                      <strong>Maqsadli o'zgaruvchi:</strong> "yes"=1, "no"=0
+                    </li>
+                  </ul>
+                </div>
+                <img src="images/6.png" alt="" />
+              </div>
+
+              <h4 class="text-xl font-semibold mb-4">Modelni Ishlab Chiqish</h4>
+              <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                  <h5 class="text-lg font-semibold mb-4">
+                    Logistic Regression
+                  </h5>
+                  <ul class="space-y-2 text-sm">
+                    <li>• Maqsadli o'zgaruvchi (y) ni bashorat qilish</li>
+                    <li>• L2 regularizatsiyasi (C=1.0)</li>
+                    <li>• 80% o'qitish, 20% sinov</li>
+                    <li>• Ikkilik tasnifi uchun optimallashtirildi</li>
+                  </ul>
+                </div>
+
+                <div class="bg-green-50 border border-green-200 rounded-lg p-6">
+                  <h5 class="text-lg font-semibold mb-4">Linear Regression</h5>
+                  <ul class="space-y-2 text-sm">
+                    <li>• Duration xususiyatini bashorat qilish</li>
+                    <li>• Oddiy va ko'p o'zgaruvchili modellar</li>
+                    <li>• Aloqa muddatining ta'sirini tahlil</li>
+                    <li>• Biznes tahlili uchun foydali</li>
+                  </ul>
+                </div>
+              </div>
+
+              <h4 class="text-xl font-semibold mb-4">Modelni Baholash</h4>
+              <div class="space-y-6">
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                  <h5 class="text-lg font-semibold mb-4">
+                    Logistic Regression Natijalari
+                  </h5>
+                  <div class="grid md:grid-cols-3 gap-4">
+                    <div class="text-center bg-green-50 p-4 rounded">
+                      <div class="text-2xl font-bold text-green-600">85%</div>
+                      <p class="text-sm">Aniqlik</p>
+                    </div>
+                    <div class="text-center bg-blue-50 p-4 rounded">
+                      <div class="text-2xl font-bold text-blue-600">0.65</div>
+                      <p class="text-sm">F1-ball</p>
+                    </div>
+                    <div class="text-center bg-purple-50 p-4 rounded">
+                      <div class="text-2xl font-bold text-purple-600">0.68</div>
+                      <p class="text-sm">To'liqlik</p>
+                    </div>
+                  </div>
+                  <br />
+                  <img src="images/7.png" alt="" />
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                  <h5 class="text-lg font-semibold mb-4">
+                    Linear Regression Natijalari
+                  </h5>
+                  <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h6 class="font-semibold mb-2">
+                        Ko'p O'zgaruvchili Model:
+                      </h6>
+                      <ul class="text-sm space-y-1">
+                        <li>• MAE: 180.3 soniya</li>
+                        <li>• RMSE: 250.7 soniya</li>
+                        <li>• R²: 0.35</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h6 class="font-semibold mb-2">Oddiy Model:</h6>
+                      <ul class="text-sm space-y-1">
+                        <li>• MAE: 220.5 soniya</li>
+                        <li>• RMSE: 310.2 soniya</li>
+                        <li>• R²: 0.12</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-gray-50 p-6 rounded-lg mt-8">
+                <h4 class="text-lg font-semibold mb-4">
+                  Biznes Maqsadlariga Moslik
+                </h4>
+                <p class="mb-4">
+                  Python, pandas va scikit-learn yordamida ishlab chiqilgan SI
+                  yechimi bankning potensial mijozlarni aniqlash maqsadiga mos
+                  keldi. Logistic Regression modeli 85% aniqlik va 0.65 F1-ball
+                  bilan mijozlarning depozitga obuna bo'lishini bashorat
+                  qilishda samarali bo'ldi.
+                </p>
+                <p>
+                  Linear Regression modeli duration ni bashorat qilishda
+                  cheklangan natijalar ko'rsatdi (R² = 0.35), ammo aloqa
+                  muddatining obuna ehtimoliga ta'sirini tahlil qilishda foydali
+                  bo'ldi.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- M3 Section -->
+          <div id="m3" class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h3
+              class="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-red-500 pb-2"
+            >
+              C.M3 - Sinov va Takomillashtirish
+            </h3>
+            <div class="prose max-w-none text-gray-700 leading-relaxed">
+              <p class="text-lg mb-6">
+                "Bank Marketing" ma'lumotlar to'plami asosida mijozlarning
+                depozitga obuna bo'lishini bashorat qiluvchi sun'iy intellekt
+                yechimi sinab ko'rildi va takomillashtirildi. Python, pandas va
+                NumPy hisoblash vositalaridan foydalangan holda Linear
+                Regression va Logistic Regression algoritmlarining sinov
+                jarayonlari tasvirlanadi.
+              </p>
+
+              <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
+                <h4 class="text-xl font-semibold mb-4">
+                  Sinov Jarayoni va Baholash
+                </h4>
+                <p class="mb-4">
+                  Ma'lumotlar 80% o'qitish va 20% sinov to'plamlariga bo'lindi.
+                  Baholash uchun quyidagi ko'rsatkichlar qo'llanildi:
+                </p>
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <h5 class="font-semibold">Logistic Regression:</h5>
+                    <ul class="text-sm mt-2 space-y-1">
+                      <li>• Aniqlik (Accuracy)</li>
+                      <li>• F1-ball</li>
+                      <li>• To'liqlik (Recall)</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 class="font-semibold">Linear Regression:</h5>
+                    <ul class="text-sm mt-2 space-y-1">
+                      <li>• MAE, RMSE</li>
+                      <li>• R² koeffitsienti</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <h4 class="text-xl font-semibold mb-4">
+                Dastlabki Sinov Natijalari
+              </h4>
+              <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div
+                  class="bg-yellow-50 border border-yellow-200 rounded-lg p-6"
+                >
+                  <h5 class="text-lg font-semibold mb-4">
+                    Logistic Regression
+                  </h5>
+                  <div class="space-y-3">
+                    <div class="flex justify-between">
+                      <span>Aniqlik:</span>
+                      <span class="font-semibold">85%</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span>F1-ball ("yes"):</span>
+                      <span class="font-semibold">0.65</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span>To'liqlik:</span>
+                      <span class="font-semibold">0.68</span>
+                    </div>
+                  </div>
+                  <div class="mt-4 p-3 bg-yellow-100 rounded">
+                    <p class="text-sm">
+                      <strong>Muammo:</strong> Sinf muvozanatsizligi tufayli
+                      "yes" sinfi bashoratlari cheklangan
+                    </p>
+                  </div>
+                </div>
+
+                <div class="bg-red-50 border border-red-200 rounded-lg p-6">
+                  <h5 class="text-lg font-semibold mb-4">Linear Regression</h5>
+                  <div class="space-y-3">
+                    <div class="flex justify-between">
+                      <span>MAE (ko'p o'zgaruvchi):</span>
+                      <span class="font-semibold">180.3s</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span>RMSE:</span>
+                      <span class="font-semibold">250.7s</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span>R²:</span>
+                      <span class="font-semibold">0.35</span>
+                    </div>
+                  </div>
+                  <div class="mt-4 p-3 bg-red-100 rounded">
+                    <p class="text-sm">
+                      <strong>Muammo:</strong> Duration ni bashorat qilishda
+                      cheklangan samaradorlik
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <h4 class="text-xl font-semibold mb-4">
+                Takomillashtirish Strategiyalari
+              </h4>
+              <div class="space-y-6">
+                <div
+                  class="bg-green-50 border-l-4 border-green-500 p-6 rounded-lg"
+                >
+                  <h5 class="text-lg font-semibold mb-3">
+                    1. Ma'lumotlar Sifatini Yaxshilash
+                  </h5>
+                  <ul class="space-y-2 text-sm">
+                    <li>
+                      • Yo'qolgan qiymatlar pandas yordamida mode bilan
+                      to'ldirildi
+                    </li>
+                    <li>
+                      • Anomaliyalar IQR usuli bilan olib tashlandi (~40,000
+                      yozuv)
+                    </li>
+                    <li>
+                      • "unknown" qiymatlar tegishli kategoriyalar bilan
+                      almashtirildi
+                    </li>
+                  </ul>
+                </div>
+
+                <div
+                  class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg"
+                >
+                  <h5 class="text-lg font-semibold mb-3">
+                    2. Xususiyat Tanlash
+                  </h5>
+                  <ul class="space-y-2 text-sm">
+                    <li>• NumPy yordamida korrelyatsiya hisoblandi</li>
+                    <li>
+                      • duration (r ≈ 0.39) va poutcome eng muhim xususiyatlar
+                    </li>
+                    <li>
+                      • day_of_week kabi past ta'sirli xususiyatlar
+                      chetlashtirildi
+                    </li>
+                    <li>• Natija: Aniqlik 85% dan 87% ga oshdi</li>
+                  </ul>
+                </div>
+
+                <div
+                  class="bg-purple-50 border-l-4 border-purple-500 p-6 rounded-lg"
+                >
+                  <h5 class="text-lg font-semibold mb-3">
+                    3. Standartlashtirish va O'zgartirish
+                  </h5>
+                  <ul class="space-y-2 text-sm">
+                    <li>• NumPy yordamida (x - μ) / σ formulasi qo'llanildi</li>
+                    <li>• F1-ball 0.65 dan 0.68 ga oshdi</li>
+                    <li>• balance va duration uchun logarifmik o'zgartirish</li>
+                    <li>• RMSE 250.7 dan 240.3 ga kamaydi</li>
+                  </ul>
+                </div>
+              </div>
+
+              <h4 class="text-xl font-semibold mb-4">
+                Takomillashtirishdan Keyingi Natijalar
+              </h4>
+              <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-green-50 border border-green-200 rounded-lg p-6">
+                  <h5 class="text-lg font-semibold mb-4">
+                    Logistic Regression
+                  </h5>
+                  <div class="space-y-3">
+                    <div class="flex justify-between">
+                      <span>Aniqlik:</span>
+                      <span class="font-semibold text-green-600">87% ↑</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span>F1-ball:</span>
+                      <span class="font-semibold text-green-600">0.68 ↑</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span>To'liqlik:</span>
+                      <span class="font-semibold text-green-600">0.70 ↑</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                  <h5 class="text-lg font-semibold mb-4">Linear Regression</h5>
+                  <div class="space-y-3">
+                    <div class="flex justify-between">
+                      <span>MAE:</span>
+                      <span class="font-semibold text-blue-600">175.6s ↓</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span>RMSE:</span>
+                      <span class="font-semibold text-blue-600">240.3s ↓</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span>R²:</span>
+                      <span class="font-semibold text-blue-600">0.38 ↑</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-gray-50 p-6 rounded-lg mt-8">
+                <h4 class="text-lg font-semibold mb-4">Xulosa</h4>
+                <p class="mb-4">
+                  pandas va NumPy vositalari ma'lumotlarni tayyorlash va model
+                  sinovini soddalashtirdi, Python esa jarayonning
+                  moslashuvchanligini ta'minladi. Logistic Regression modeli
+                  bankning marketing strategiyasini optimallashtirishda
+                  muvaffaqiyatli bo'ldi.
+                </p>
+                <p>
+                  Linear Regression esa qo'shimcha tahlil uchun foydali, lekin
+                  cheklangan natijalar berdi. Ushbu yechim potensial mijozlarni
+                  aniqlashda ishonchli va samarali hisoblanadi.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- D3 Section -->
+          <div id="d3" class="bg-white rounded-xl shadow-lg p-8">
+            <h3
+              class="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-red-500 pb-2"
+            >
+              C.D3 - Yakuniy Baholash
+            </h3>
+            <div class="prose max-w-none text-gray-700 leading-relaxed">
+              <p class="text-lg mb-6">
+                "Bank Marketing" ma'lumotlar to'plami asosida mijozlarning
+                depozitga obuna bo'lishini bashorat qiluvchi sun'iy intellekt
+                yechimi ishlab chiqildi. Python, pandas, NumPy va scikit-learn
+                hisoblash vositalaridan foydalangan holda Linear Regression va
+                Logistic Regression algoritmlarining samaradorligi matematik
+                ko'rsatkichlar va biznes maqsadlariga mosligi asosida
+                baholanadi.
+              </p>
+
+              <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
+                <h4 class="text-xl font-semibold mb-4">
+                  Yakuniy Baholash Mezonlari
+                </h4>
+                <div class="grid md:grid-cols-3 gap-4">
+                  <div>
+                    <h5 class="font-semibold">Logistic Regression:</h5>
+                    <ul class="text-sm mt-2 space-y-1">
+                      <li>• Accuracy, F1-score</li>
+                      <li>• Precision, Recall</li>
+                      <li>• Confusion Matrix</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 class="font-semibold">Linear Regression:</h5>
+                    <ul class="text-sm mt-2 space-y-1">
+                      <li>• MAE, RMSE</li>
+                      <li>• MAPE, R²</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 class="font-semibold">Ma'lumotlar:</h5>
+                    <ul class="text-sm mt-2 space-y-1">
+                      <li>• 85% o'quv</li>
+                      <li>• 15% sinov</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <h4 class="text-xl font-semibold mb-4">Yakuniy Natijalar</h4>
+              <div class="space-y-8">
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                  <h5 class="text-lg font-semibold mb-4">
+                    Logistic Regression - Yakuniy Samaradorlik
+                  </h5>
+                  <div class="grid md:grid-cols-4 gap-4 mb-4">
+                    <div class="text-center bg-green-50 p-4 rounded">
+                      <div class="text-2xl font-bold text-green-600">90%</div>
+                      <p class="text-sm">Aniqlik</p>
+                    </div>
+                    <div class="text-center bg-blue-50 p-4 rounded">
+                      <div class="text-2xl font-bold text-blue-600">0.58</div>
+                      <p class="text-sm">F1-score</p>
+                    </div>
+                    <div class="text-center bg-purple-50 p-4 rounded">
+                      <div class="text-2xl font-bold text-purple-600">0.64</div>
+                      <p class="text-sm">Precision</p>
+                    </div>
+                    <div class="text-center bg-orange-50 p-4 rounded">
+                      <div class="text-2xl font-bold text-orange-600">0.53</div>
+                      <p class="text-sm">Recall</p>
+                    </div>
+                  </div>
+                  <img src="images/8.png" alt="" />
+                  <div class="bg-yellow-50 p-4 rounded">
+                    <p class="text-sm">
+                      <strong>Tahlil:</strong> 90% aniqlik yuqori bo'lsa-da,
+                      "yes" sinfi uchun 0.53 to'liqlik potensial mijozlarning
+                      faqat yarmidan ko'prog'ini aniqlay olishini ko'rsatadi.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                  <h5 class="text-lg font-semibold mb-4">
+                    Linear Regression - Yakuniy Samaradorlik
+                  </h5>
+                  <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h6 class="font-semibold mb-3">
+                        Oddiy Chiziqli Regressiya:
+                      </h6>
+                      <div class="space-y-2">
+                        <div class="flex justify-between">
+                          <span>MAE:</span>
+                          <span class="font-semibold">0.79</span>
+                        </div>
+                        <div class="flex justify-between">
+                          <span>RMSE:</span>
+                          <span class="font-semibold">1.00</span>
+                        </div>
+                        <div class="flex justify-between">
+                          <span>MAPE:</span>
+                          <span class="font-semibold">117.26%</span>
+                        </div>
+                        <div class="flex justify-between">
+                          <span>R²:</span>
+                          <span class="font-semibold">0.00</span>
+                        </div>
+                        <div class="childd" style="display: flex; gap: 90px">
+                          <img src="images/9.png" alt="" />
+                          <img src="images/10.png" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <h6 class="font-semibold mb-3">Ko'p O'zgaruvchili:</h6>
+                      <div class="space-y-2">
+                        <div class="flex justify-between">
+                          <span>MAE:</span>
+                          <span class="font-semibold">0.79</span>
+                        </div>
+                        <div class="flex justify-between">
+                          <span>RMSE:</span>
+                          <span class="font-semibold">0.99</span>
+                        </div>
+                        <div class="flex justify-between">
+                          <span>MAPE:</span>
+                          <span class="font-semibold">126.71%</span>
+                        </div>
+                        <div class="flex justify-between">
+                          <span>R²:</span>
+                          <span class="font-semibold">0.01</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-red-50 p-4 rounded mt-4">
+                    <p class="text-sm">
+                      <strong>Tahlil:</strong> Linear Regression modeli duration
+                      ni bashorat qilishda juda cheklangan foydaliligini
+                      ko'rsatdi (R² = 0.01).
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <h4 class="text-xl font-semibold mb-4">
+                Ma'lumotlar Tayyorlashning Ta'siri
+              </h4>
+              <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div
+                  class="bg-green-50 border-l-4 border-green-500 p-6 rounded-lg"
+                >
+                  <h5 class="text-lg font-semibold mb-3">Ijobiy Ta'sirlar</h5>
+                  <ul class="space-y-2 text-sm">
+                    <li>
+                      • Yo'qolgan qiymatlarni to'ldirish modelni
+                      barqarorlashtirdi
+                    </li>
+                    <li>• Anomaliyalarni olib tashlash RMSE ni yaxshiladi</li>
+                    <li>
+                      • Kodlash va standartlashtirish konvergentsiyani
+                      tezlashtirdi
+                    </li>
+                  </ul>
+                </div>
+
+                <div
+                  class="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-lg"
+                >
+                  <h5 class="text-lg font-semibold mb-3">Cheklovlar</h5>
+                  <ul class="space-y-2 text-sm">
+                    <li>
+                      • Sinf muvozanatsizligi "yes" sinfi to'liqligini chekladi
+                    </li>
+                    <li>
+                      • Duration bashorati uchun qo'shimcha xususiyatlar kerak
+                    </li>
+                    <li>• Tushuntiriladigan AI tamoyillari yetarli emas</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="bg-gray-50 p-6 rounded-lg">
+                <h4 class="text-lg font-semibold mb-4">
+                  Biznes Maqsadlariga Yakuniy Moslik
+                </h4>
+                <div class="space-y-4">
+                  <div class="bg-white p-4 rounded border-l-4 border-green-500">
+                    <h5 class="font-semibold text-green-800 mb-2">
+                      Logistic Regression
+                    </h5>
+                    <p class="text-sm">
+                      90% aniqlik va "yes" sinfi uchun 0.58 F1-score bilan
+                      bankning potensial mijozlarni aniqlash maqsadiga qisman
+                      mos keldi. Biroq, 0.53 to'liqlik marketing resurslarini
+                      to'liq optimallashtirish uchun yetarli emas.
+                    </p>
+                  </div>
+
+                  <div class="bg-white p-4 rounded border-l-4 border-red-500">
+                    <h5 class="font-semibold text-red-800 mb-2">
+                      Linear Regression
+                    </h5>
+                    <p class="text-sm">
+                      Duration ni bashorat qilishda juda cheklangan samaradorlik
+                      (R² = 0.01) uning biznes maqsadlari uchun amaliy foydasini
+                      kamaytirdi.
+                    </p>
+                  </div>
+
+                  <div class="bg-white p-4 rounded border-l-4 border-blue-500">
+                    <h5 class="font-semibold text-blue-800 mb-2">Tavsiyalar</h5>
+                    <p class="text-sm">
+                      Logistic Regression'ning "yes" sinfi uchun to'liqligini
+                      oshirish uchun qo'shimcha takomillashtirishlar (sinf
+                      muvozanatsizligini boshqacha usullar bilan hal qilish)
+                      talab qilinadi.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section id="conclusion" class="mb-16">
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <h2
+              class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2"
+            >
+              Xulosa
+            </h2>
+            <div class="prose max-w-none text-gray-700 leading-relaxed">
+              <p class="text-lg mb-6">
+                "Bank Marketing" ma'lumotlar to'plami asosida Python dasturlash
+                tili va pandas, NumPy hamda scikit-learn hisoblash vositalaridan
+                foydalanib, mijozlarning depozitga obuna bo'lishini bashorat
+                qiluvchi sun'iy intellekt yechimi ishlab chiqildi.
+              </p>
+
+              <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
+                <h3 class="text-xl font-semibold mb-4">Loyiha Natijalari</h3>
+                <p class="mb-4">
+                  Faqat Linear Regression va Logistic Regression algoritmlariga
+                  asoslangan ushbu yechim ma'lumotlar tayyorlash, model
+                  o'qitish, sinovdan o'tkazish va samaradorlikni baholash
+                  bosqichlarini o'z ichiga oldi. Yechim bankning potensial
+                  mijozlarni aniqlash va marketing strategiyasini
+                  optimallashtirish maqsadlariga qisman mos keldi, ammo bir
+                  qator cheklovlar aniqlandi.
+                </p>
+              </div>
+
+              <h3 class="text-xl font-semibold mb-4">Asosiy Yutuqlar</h3>
+              <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div class="space-y-4">
+                  <div
+                    class="bg-green-50 border border-green-200 rounded-lg p-6"
+                  >
+                    <h4 class="text-lg font-semibold text-green-800 mb-3">
+                      Ma'lumotlar Tayyorlash
+                    </h4>
+                    <ul class="space-y-2 text-sm">
+                      <li>
+                        • pandas yordamida NaN va "unknown" qiymatlar mode bilan
+                        to'ldirildi
+                      </li>
+                      <li>
+                        • Anomaliyalar IQR usuli bilan olib tashlandi (~40,186
+                        yozuv)
+                      </li>
+                      <li>
+                        • Kategoriyali ustunlar OrdinalEncoder orqali kodlandi
+                      </li>
+                      <li>
+                        • Sonli ustunlar StandardScaler bilan
+                        standartlashtirildi
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                    <h4 class="text-lg font-semibold text-blue-800 mb-3">
+                      Model Samaradorligi
+                    </h4>
+                    <ul class="space-y-2 text-sm">
+                      <li>• Logistic Regression: 90% aniqlik</li>
+                      <li>• "Yes" sinfi uchun 0.58 F1-score</li>
+                      <li>• Linear Regression: R² = 0.01 (cheklangan)</li>
+                      <li>• 85% o'quv, 15% sinov bo'linishi</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="space-y-4">
+                  <div
+                    class="bg-purple-50 border border-purple-200 rounded-lg p-6"
+                  >
+                    <h4 class="text-lg font-semibold text-purple-800 mb-3">
+                      Texnologik Yechimlar
+                    </h4>
+                    <ul class="space-y-2 text-sm">
+                      <li>• Python: asosiy dasturlash tili</li>
+                      <li>• pandas: ma'lumotlarni tayyorlash</li>
+                      <li>• NumPy: matematik hisob-kitoblar</li>
+                      <li>• scikit-learn: model o'qitish va baholash</li>
+                    </ul>
+                  </div>
+
+                  <div
+                    class="bg-orange-50 border border-orange-200 rounded-lg p-6"
+                  >
+                    <h4 class="text-lg font-semibold text-orange-800 mb-3">
+                      Biznes Ta'siri
+                    </h4>
+                    <ul class="space-y-2 text-sm">
+                      <li>• Potensial mijozlarni qisman aniqlash</li>
+                      <li>• Marketing resurslarini optimallashtirish</li>
+                      <li>• Ma'lumotlarga asoslangan qarorlar</li>
+                      <li>• Raqobatbardoshlikni oshirish</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <h3 class="text-xl font-semibold mb-4">
+                Cheklovlar va Takomillashtirish Imkoniyatlari
+              </h3>
+              <div class="space-y-6">
+                <div
+                  class="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-lg"
+                >
+                  <h4 class="text-lg font-semibold mb-3">
+                    Aniqlangan Cheklovlar
+                  </h4>
+                  <ul class="space-y-2">
+                    <li>
+                      <strong>Sinf muvozanatsizligi:</strong> "Yes" sinfi uchun
+                      past to'liqlik (0.53) marketing kampaniyalarining
+                      samaradorligini chekladi
+                    </li>
+                    <li>
+                      <strong>Linear Regression:</strong> Duration ni bashorat
+                      qilishda juda past aniqlik (R² = 0.01)
+                    </li>
+                    <li>
+                      <strong>Tushuntiriladigan AI:</strong> Qarorlarning
+                      shaffofligini ta'minlash zarur
+                    </li>
+                  </ul>
+                </div>
+
+                <div
+                  class="bg-green-50 border-l-4 border-green-500 p-6 rounded-lg"
+                >
+                  <h4 class="text-lg font-semibold mb-3">
+                    Kelajakdagi Takomillashtirishlar
+                  </h4>
+                  <ul class="space-y-2">
+                    <li>
+                      <strong>SMOTE yoki boshqa usullar:</strong> Sinf
+                      muvozanatsizligini hal qilish
+                    </li>
+                    <li>
+                      <strong>Xususiyat muhandisligi:</strong> Yangi
+                      xususiyatlar yaratish
+                    </li>
+                    <li>
+                      <strong>Boshqa algoritmlar:</strong> Random Forest,
+                      Gradient Boosting sinovdan o'tkazish
+                    </li>
+                    <li>
+                      <strong>Cross-validation:</strong> Modelning
+                      barqarorligini oshirish
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="bg-gray-50 p-6 rounded-lg mt-8">
+                <h3 class="text-lg font-semibold mb-4">Yakuniy Baholash</h3>
+                <p class="mb-4">
+                  Biznes maqsadlariga ko'ra, Logistic Regression modeli
+                  potensial mijozlarni aniqlashda qisman muvaffaqiyatli bo'ldi,
+                  lekin "yes" sinfi uchun past to'liqlik marketing
+                  kampaniyalarining samaradorligini chekladi. Linear Regression
+                  modeli esa duration ni bashorat qilishda foydadan ko'ra
+                  ko'proq tahliliy ma'lumot berdi.
+                </p>
+                <p class="mb-4">
+                  pandas, NumPy va scikit-learn ma'lumotlarni tayyorlash va
+                  baholashni soddalashtirdi, Python esa jarayonning
+                  moslashuvchanligini ta'minladi. Yechimning cheklovlari asosan
+                  sinf muvozanatsizligi va duration ni bashorat qilishdagi past
+                  aniqlik bilan bog'liq.
+                </p>
+                <p>
+                  <strong
+                    >Ushbu loyiha sun'iy intellekt yechimlarini ishlab chiqishda
+                    ma'lumotlar sifati, algoritm tanlash va biznes maqsadlariga
+                    moslashtirishning muhimligini ko'rsatdi.</strong
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- References Section -->
+        <section id="references" class="mb-16">
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <h2
+              class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2"
+            >
+              Manbalar ro'yxati
+            </h2>
+            <div class="prose max-w-none text-gray-700 leading-relaxed">
+              <ol class="space-y-4 text-sm">
+                <li>
+                  <strong>Dua, D. & Graff, C., 2019.</strong> UCI Machine
+                  Learning Repository. Irvine, CA: University of California,
+                  School of Information and Computer Science. Available at:
+                  <a
+                    href="http://archive.ics.uci.edu/ml"
+                    class="text-blue-600 hover:underline"
+                    >http://archive.ics.uci.edu/ml</a
+                  >
+                  [Accessed 25 May 2025].
+                </li>
+
+                <li>
+                  <strong>Moro, S., Cortez, P. & Rita, P., 2014.</strong> A
+                  data-driven approach to predict the success of bank
+                  telemarketing. Decision Support Systems, 62, pp. 22-31.
+                  Available at:
+                  <a
+                    href="https://doi.org/10.1016/j.dss.2014.03.001"
+                    class="text-blue-600 hover:underline"
+                    >https://doi.org/10.1016/j.dss.2014.03.001</a
+                  >
+                  [Accessed 25 May 2025].
+                </li>
+
+                <li>
+                  <strong
+                    >Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V.,
+                    Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P.,
+                    Weiss, R., Dubourg, V., Vanderplas, J., Passos, A.,
+                    Cournapeau, D., Brucher, M., Perrot, M. & Duchesnay, E.,
+                    2011.</strong
+                  >
+                  Scikit-learn: Machine Learning in Python. Journal of Machine
+                  Learning Research, 12, pp. 2825-2830. Available at:
+                  <a
+                    href="http://jmlr.csail.mit.edu/papers/v12/pedregosa11a.html"
+                    class="text-blue-600 hover:underline"
+                    >http://jmlr.csail.mit.edu/papers/v12/pedregosa11a.html</a
+                  >
+                  [Accessed 25 May 2025].
+                </li>
+
+                <li>
+                  <strong>McKinney, W., 2010.</strong> Data Structures for
+                  Statistical Computing in Python. Proceedings of the 9th Python
+                  in Science Conference, pp. 56-61. Available at:
+                  <a
+                    href="https://doi.org/10.25080/Majora-92bf1922-00a"
+                    class="text-blue-600 hover:underline"
+                    >https://doi.org/10.25080/Majora-92bf1922-00a</a
+                  >
+                  [Accessed 25 May 2025].
+                </li>
+
+                <li>
+                  <strong
+                    >Harris, C. R., Millman, K. J., van der Walt, S. J.,
+                    Gommers, R., Virtanen, P., Cournapeau, D., Wieser, E.,
+                    Taylor, J., Berg, S., Smith, N. J., Kern, R., Picus, M.,
+                    Hoyer, S., van Kerkwijk, M. H., Brett, M., Haldane, A., del
+                    Río, J. F., Wiebe, M., Peterson, P., Gérard-Marchant, P.,
+                    Sheppard, K., Reddy, T., Weckesser, W., Abbasi, H., Gohlke,
+                    C. & Oliphant, T. E., 2020.</strong
+                  >
+                  Array programming with NumPy. Nature, 585(7825), pp. 357-362.
+                  Available at:
+                  <a
+                    href="https://doi.org/10.1038/s41586-020-2649-2"
+                    class="text-blue-600 hover:underline"
+                    >https://doi.org/10.1038/s41586-020-2649-2</a
+                  >
+                  [Accessed 25 May 2025].
+                </li>
+
+                <li>
+                  <strong
+                    >Chawla, N. V., Bowyer, K. W., Hall, L. O. & Kegelmeyer, W.
+                    P., 2002.</strong
+                  >
+                  SMOTE: Synthetic Minority Over-sampling Technique. Journal of
+                  Artificial Intelligence Research, 16, pp. 321-357. Available
+                  at:
+                  <a
+                    href="https://doi.org/10.1613/jair.953"
+                    class="text-blue-600 hover:underline"
+                    >https://doi.org/10.1613/jair.953</a
+                  >
+                  [Accessed 25 May 2025].
+                </li>
+
+                <li>
+                  <strong
+                    >Hosmer, D. W., Lemeshow, S. & Sturdivant, R. X.,
+                    2013.</strong
+                  >
+                  Applied Logistic Regression. 3rd ed. New York: John Wiley &
+                  Sons.
+                </li>
+
+                <li>
+                  <strong
+                    >James, G., Witten, D., Hastie, T. & Tibshirani, R.,
+                    2021.</strong
+                  >
+                  An Introduction to Statistical Learning: with Applications in
+                  R. 2nd ed. New York: Springer.
+                </li>
+
+                <li>
+                  <strong>Géron, A., 2019.</strong> Hands-On Machine Learning
+                  with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and
+                  Techniques to Build Intelligent Systems. 2nd ed. Sebastopol,
+                  CA: O'Reilly Media.
+                </li>
+
+                <li>
+                  <strong
+                    >Hastie, T., Tibshirani, R. & Friedman, J., 2009.</strong
+                  >
+                  The Elements of Statistical Learning: Data Mining, Inference,
+                  and Prediction. 2nd ed. New York: Springer.
+                </li>
+
+                <li>
+                  <strong>Bishop, C. M., 2006.</strong> Pattern Recognition and
+                  Machine Learning. New York: Springer.
+                </li>
+
+                <li>
+                  <strong>Provost, F. & Fawcett, T., 2013.</strong> Data Science
+                  for Business: What You Need to Know about Data Mining and
+                  Data-Analytic Thinking. Sebastopol, CA: O'Reilly Media.
+                </li>
+
+                <li>
+                  <strong
+                    >Kelleher, J. D., Mac Namee, B. & D'Arcy, A., 2015.</strong
+                  >
+                  Fundamentals of Machine Learning for Predictive Data
+                  Analytics: Algorithms, Worked Examples, and Case Studies.
+                  Cambridge, MA: MIT Press.
+                </li>
+
+                <li>
+                  <strong>European Union, 2016.</strong> General Data Protection
+                  Regulation (GDPR). Regulation (EU) 2016/679. Official Journal
+                  of the European Union, L119, pp. 1-88. Available at:
+                  <a
+                    href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679"
+                    class="text-blue-600 hover:underline"
+                    >https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679</a
+                  >
+                  [Accessed 25 May 2025].
+                </li>
+
+                <li>
+                  <strong>Russell, S. & Norvig, P., 2020.</strong> Artificial
+                  Intelligence: A Modern Approach. 4th ed. Boston: Pearson.
+                </li>
+
+                <li>
+                  <strong>Mitchell, T. M., 1997.</strong> Machine Learning. New
+                  York: McGraw-Hill.
+                </li>
+
+                <li>
+                  <strong>Alpaydin, E., 2020.</strong> Introduction to Machine
+                  Learning. 4th ed. Cambridge, MA: MIT Press.
+                </li>
+
+                <li>
+                  <strong>Müller, A. C. & Guido, S., 2016.</strong> Introduction
+                  to Machine Learning with Python: A Guide for Data Scientists.
+                  Sebastopol, CA: O'Reilly Media.
+                </li>
+
+                <li>
+                  <strong>VanderPlas, J., 2016.</strong> Python Data Science
+                  Handbook: Essential Tools for Working with Data. Sebastopol,
+                  CA: O'Reilly Media.
+                </li>
+
+                <li>
+                  <strong>Raschka, S. & Mirjalili, V., 2019.</strong> Python
+                  Machine Learning: Machine Learning and Deep Learning with
+                  Python, scikit-learn, and TensorFlow 2. 3rd ed. Birmingham:
+                  Packt Publishing.
+                </li>
+
+                <li>
+                  <strong>Brownlee, J., 2016.</strong> Master Machine Learning
+                  Algorithms: Discover How They Work and Implement Them From
+                  Scratch. Machine Learning Mastery.
+                </li>
+              </ol>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      // Sidebar functionality
+      const openSidebar = document.getElementById("openSidebar");
+      const closeSidebar = document.getElementById("closeSidebar");
+      const sidebar = document.getElementById("sidebar");
+      const overlay = document.getElementById("overlay");
+
+      function showSidebar() {
+        sidebar.classList.remove("-translate-x-full");
+        overlay.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+      }
+
+      function hideSidebar() {
+        sidebar.classList.add("-translate-x-full");
+        overlay.classList.add("hidden");
+        document.body.style.overflow = "auto";
+      }
+
+      openSidebar.addEventListener("click", showSidebar);
+      closeSidebar.addEventListener("click", hideSidebar);
+      overlay.addEventListener("click", hideSidebar);
+
+      // Navigation functionality
+      function scrollToSection(sectionId) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+          // Close sidebar on mobile after navigation
+          hideSidebar();
+        }
+      }
+
+      // Add click handlers to all navigation links
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href").substring(1);
+          scrollToSection(targetId);
+        });
+      });
+
+      // Highlight current section in navigation
+      function highlightCurrentSection() {
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        let currentSection = "";
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop - 100;
+          const sectionHeight = section.offsetHeight;
+
+          if (
+            window.scrollY >= sectionTop &&
+            window.scrollY < sectionTop + sectionHeight
+          ) {
+            currentSection = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("bg-blue-100", "text-blue-800");
+          if (link.getAttribute("href") === "#" + currentSection) {
+            link.classList.add("bg-blue-100", "text-blue-800");
+          }
+        });
+      }
+
+      // Add scroll event listener
+      window.addEventListener("scroll", highlightCurrentSection);
+
+      // Keyboard navigation
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          hideSidebar();
+        }
+      });
+
+      // Initialize
+      document.addEventListener("DOMContentLoaded", function () {
+        highlightCurrentSection();
+      });
+    </script>
+  </body>
+</html>
